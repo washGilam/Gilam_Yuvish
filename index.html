@@ -121,40 +121,25 @@
         </div>
       </div>
 
-      <!-- Кнопка Telegram -->
-      <a id="telegramBtn" href="https://t.me/957500066" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-slate-950 font-black py-5 px-8 rounded-2xl shadow-xl shadow-emerald-500/20 flex items-center justify-center space-x-3 text-center transition duration-200 transform hover:-translate-y-0.5">
-        <span class="text-lg font-extrabold text-white" data-ru="Заказать стирку в Telegram" data-uz="Telegram orqali buyurtma berish">Заказать стирку в Telegram</span>
-      </a>
+      <!-- Кнопки заказа: Telegram + Позвонить -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a id="telegramBtn" href="https://t.me/iebcs" target="_blank" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-slate-950 font-black py-4 px-6 rounded-2xl shadow-xl shadow-emerald-500/20 flex items-center justify-center space-x-2 text-center transition duration-200 transform hover:-translate-y-0.5">
+          <span class="text-base font-extrabold text-white" data-ru="Заказать в Telegram (@iebcs)" data-uz="Telegram orqali buyurtma (@iebcs)">Заказать в Telegram (@iebcs)</span>
+        </a>
+
+        <a href="tel:+998957500066" class="bg-slate-900 hover:bg-slate-700 text-cyan-400 font-black py-4 px-6 rounded-2xl border-2 border-cyan-500/40 flex items-center justify-center space-x-2 text-center transition duration-200 transform hover:-translate-y-0.5">
+          <span class="text-base font-extrabold" data-ru="Позвонить: +998 95 750-00-66" data-uz="Qo'ng'iroq qilish: +998 95 750-00-66">Позвонить: +998 95 750-00-66</span>
+        </a>
+      </div>
 
       <p class="text-center text-xs text-slate-400 font-medium" data-ru="* Бесплатный вывоз и доставка по всему Ташкенту" data-uz="* Toshkent bo'ylab olib ketish va yetkazib berish bepul">* Бесплатный вывоз и доставка по всему Ташкенту</p>
     </div>
   </main>
 
-  <!-- Преимущества -->
-  <section class="max-w-5xl mx-auto px-4 pb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/80 shadow-lg text-center space-y-3">
-      <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mx-auto text-2xl font-bold border border-cyan-500/20">🚚</div>
-      <h3 class="font-bold text-white text-lg" data-ru="Бесплатная доставка" data-uz="Bepul yetkazib berish">Бесплатная доставка</h3>
-      <p class="text-xs text-slate-400 leading-relaxed" data-ru="Заберем грязный ковер из дома и привезем чистым обратно." data-uz="Kir gilamni uyingizdan olib ketamiz va toza holatda qaytarib beramiz.">Заберем грязный ковер из дома и привезем чистым обратно.</p>
-    </div>
-
-    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/80 shadow-lg text-center space-y-3">
-      <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mx-auto text-2xl font-bold border border-cyan-500/20">🌿</div>
-      <h3 class="font-bold text-white text-lg" data-ru="Эко-химия" data-uz="Eko-kimyoviy vositalar">Эко-химия</h3>
-      <p class="text-xs text-slate-400 leading-relaxed" data-ru="Гипоаллергенные средства, безопасные для детей и питомцев." data-uz="Bolalar va uy hayvonlari uchun xavfsiz gipoallergen vositalar.">Гипоаллергенные средства, безопасные для детей и питомцев.</p>
-    </div>
-
-    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/80 shadow-lg text-center space-y-3">
-      <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mx-auto text-2xl font-bold border border-cyan-500/20">☀️</div>
-      <h3 class="font-bold text-white text-lg" data-ru="Сушильная камера" data-uz="Quritish kamerasi">Сушильная камера</h3>
-      <p class="text-xs text-slate-400 leading-relaxed" data-ru="Сушим в закрытом помещении — ковры сохнут на 100% без прелости." data-uz="Yopiq kamerada quritiladi — gilamlar 100% hidsiz va quruq chiqadi.">Сушим в закрытом помещении — ковры сохнут на 100% без прелости.</p>
-    </div>
-  </section>
-
   <!-- Подвал -->
   <footer class="bg-slate-950 text-slate-400 py-10 px-4 mt-auto text-center border-t border-slate-800">
     <div class="max-w-4xl mx-auto space-y-3">
-      <p class="text-white font-extrabold text-xl tracking-wider">+998 95 750-00-66</p>
+      <a href="tel:+998957500066" class="text-white font-extrabold text-2xl tracking-wider hover:text-cyan-400 transition block">+998 95 750-00-66</a>
       <p class="text-xs text-slate-400" data-ru="Ташкент, Сергелийский район" data-uz="Toshkent, Sergeli tumani">Ташкент, Сергелийский район</p>
       <p class="text-xs text-slate-600">© 2026 Gilam Yuvish Tashkent</p>
     </div>
@@ -208,7 +193,8 @@
         ? "Здравствуйте! Хочу заказать стирку ковра " + width + "x" + length + " м (" + area.toFixed(1) + " м²). Расчетная цена: " + totalPrice.toLocaleString('ru-RU') + " сум."
         : "Assalomu alaykum! Gilam yuvishga buyurtma bermoqchiman " + width + "x" + length + " m (" + area.toFixed(1) + " m²). Taxminiy narx: " + totalPrice.toLocaleString('ru-RU') + " so'm.";
 
-      document.getElementById('telegramBtn').href = "https://t.me/+998957500066?text=" + encodeURIComponent(message);
+      // Ссылка напрямую на username @iebcs
+      document.getElementById('telegramBtn').href = "https://t.me/iebcs?text=" + encodeURIComponent(message);
     }
 
     function setPreset(w, l) {
